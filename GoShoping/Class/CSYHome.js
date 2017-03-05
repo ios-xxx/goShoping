@@ -80,4 +80,6 @@ const searchStyles = StyleSheet.create({
     }
 
 })
+
+
 module.exports = Home;
