@@ -6,7 +6,7 @@ import {Image,
 } from 'react-native';
 import  Navigator from 'react-native-tab-navigator';
 
-import Main from '../CSYMain';
+import Main from '../CSYMain/CSYMain';
 
 var Launch = React.createClass ({
 
