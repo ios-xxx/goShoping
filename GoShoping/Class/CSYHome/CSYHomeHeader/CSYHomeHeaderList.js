@@ -56,7 +56,6 @@ var customListView = React.createClass({
         for (var i = 0; i < length2; i++) {
 
             var dataObj = this.props.listData[index2];
-            console.log('->length2=' + index2)
             cellArr.push(
 
                     <View key={i} style={{width:cellW,height:cellW*1.2,marginLeft:cellW/6,marginTop:cellW/6}}>

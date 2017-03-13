@@ -16,7 +16,12 @@ var Mine =React.createClass ({
 
         return(
             <View style={{flex:1, backgroundColor:'#f0eef5'}}>
-            <ScrollView>
+            <ScrollView ref ='scroll'
+                keyboardDismissMode='on-drag'
+                showsVerticalScrollIndicator={true}
+                        contentInset={{top:-300}}
+                        contentOffset={{y:300}}
+            >
                 {/*添加头部*/}
                 {this.headerNav()}
             <Cell
@@ -82,7 +87,7 @@ var {width} = Dimensions.get('window');
 const  headerStyles = StyleSheet.create({
     backgroundView:{
         width:width,
-        height:210,
+        height:510,
         backgroundColor:'#fa4221'
     }
 })

@@ -1,56 +1,105 @@
 {
-  "data":[
-    {
-      "img":"mj",
-      "title":"足疗"
-    },
-    {
-      "img":"xckc",
-      "title":"bmc"
-    },
-    {
-      "img":"mj",
-      "title":"足疗"
-    },
-    {
-      "img":"xckc",
-      "title":"sb"
-    },
-    {
-      "img":"mj",
-      "title":"足疗"
-    },
-    {
-      "img":"mj",
-      "title":"km"
-    },
-    {
-      "img":"mj",
-      "title":"足疗"
-    },
-    {
-      "img":"mj",
-      "title":"足疗"
+  "data": {
+    "header": [
+      {
+        "img": "mj",
+        "title": "足疗"
+      },
+      {
+        "img": "xckc",
+        "title": "bmc"
+      },
+      {
+        "img": "mj",
+        "title": "足疗"
+      },
+      {
+        "img": "xckc",
+        "title": "sb"
+      },
+      {
+        "img": "mj",
+        "title": "足疗"
+      },
+      {
+        "img": "mj",
+        "title": "km"
+      },
+      {
+        "img": "mj",
+        "title": "足疗"
+      },
+      {
+        "img": "mj",
+        "title": "足疗"
+      },
+      {
+        "img": "mj",
+        "title": "足疗"
+      },
+      {
+        "img": "mj",
+        "title": "足疗"
+      },
+      {
+        "img": "mj",
+        "title": "生活"
+      },
+      {
+        "img": "xckc",
+        "title": "小吃"
+      },
+      {
+        "img": "mj",
+        "title": "足疗"
+      }
+    ],"class":{
+      "class1":[
+        {
+          "img":"mdqg",
+          "img1":"yyms",
+          "title":"探路组碳烤鱼",
+          "price":"￥9.5",
+          "detail":"再减3"
+        },
+        {
+          "img":"tttj",
+          "title":"天天特价",
+          "detail":"特惠不打烊"
+        },
+        {
+          "img":"yyms",
+          "title":"一元吃",
+          "detail":"一元吃美食"
+        }
+      ],
+      "class2":[
+        {
+          "img":"tttj",
+          "title":"天天特价",
+          "detail":"特惠不打烊"
+        },
+        {
+          "img":"tttj",
+          "title":"天天特价",
+          "detail":"特惠不打烊"
+        },
+        {
+          "img":"tttj",
+          "title":"天天特价",
+          "detail":"特惠不打烊"
+        },
+        {
+          "img":"tttj",
+          "title":"天天特价",
+          "detail":"特惠不打烊"
+        },
+        {
+          "img":"tttj",
+          "title":"天天特价",
+          "detail":"特惠不打烊"
+        }
+      ]
     }
-  ,{
-      "img":"mj",
-      "title":"足疗"
-    },
-    {
-      "img":"mj",
-      "title":"足疗"
-    },
-    {
-      "img":"mj",
-      "title":"生活"
-    },
-    {
-      "img":"xckc",
-      "title":"小吃"
-    },
-    {
-      "img":"mj",
-      "title":"足疗"
-    }
-  ]
+}
 }

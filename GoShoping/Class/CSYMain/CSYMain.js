@@ -30,7 +30,7 @@ var Main = React.createClass({
 
     getInitialState(){
         return{
-            selectionIndex:0
+            selectionIndex:2
         }
     },
 
@@ -42,10 +42,10 @@ var Main = React.createClass({
                 <TabNavigator.Item
                     title="首页"
                     renderIcon={() => <Image source={require('../../drawable-xxhdpi/icon_tabbar_homepage.png')} style={styles.iconStyle} resizeMode='stretch'/>} // 图标
-                    renderSelectedIcon={() =><Image source={require('../../drawable-xxhdpi/icon_tabbar_homepage_selected.png')} style={styles.iconStyle}/>}   // 选中的图标
+                    renderSelectedIcon={() =><Image source={{uri:'icon_tabbar_homepage_selected'}} style={styles.iconStyle}/>}   // 选中的图标
                     selected = {this.state.selectionIndex == 0}
                     onPress={()=>this.setState({selectionIndex:0})}
-
+                    selectedTitleStyle={{color:'orange'}}
                 >
                     <Home/>
 
@@ -65,29 +65,38 @@ var Main = React.createClass({
 
                 <TabNavigator.Item
                     title = 'Shop'
-                    badge='5'
-                    renderIcon={()=> <Image source={require('../../drawable-xxhdpi/icon_tabbar_merchant_normal.png')}
-                     renderSelectedIcon = {()=> <Image source={require('../../drawable-xxhdpi/icon_tabbar_merchant_selected.png')}
-
-                     />}
-                     style={styles.iconStyle}/> }
-
+                    badgeText='5'
+                    selectedTitleStyle={{color:'orange'}}
+                    renderIcon={() => <Image source={require('../../drawable-xxhdpi/icon_tabbar_homepage.png')} style={styles.iconStyle} resizeMode='stretch'/>} // 图标
+                    renderSelectedIcon={() =><Image source={{uri:'icon_tabbar_homepage_selected'}} style={styles.iconStyle}/>}   // 选中的图标
                     selected = {this.state.selectionIndex == 1}
-                    onPress={()=> this.setState({selectionIndex:1})}
-
+                    onPress={()=>this.setState({selectionIndex:1})}
                 >
-                    {/*购物*/}
                     <Shoping/>
+
+                    {/*<Navigator*/}
+                    {/*initialRoute={{name:'Home',component:Home}}//指定默认子组件页面*/}
+                    {/*configureScene={() =>{*/}
+                    {/*return Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft;//跳转动画*/}
+                    {/*}}*/}
+                    {/*renderScene={(rute,navigator) => {*/}
+                    {/**/}
+                    {/*let  Component = rute.component;*/}
+                    {/*return <Component {...rute.passProps} navigator={navigator}/>;*/}
+                    {/*}}/>*/}
+
+
                 </TabNavigator.Item>
+
                 <TabNavigator.Item
                     title = 'Mine'
+                    selectedTitleStyle={{color:'orange'}}
                     renderIcon={()=> <Image source={require('../../drawable-xxhdpi/icon_tabbar_mine.png')}
-                     renderSelectedIcon = {()=> <Image source={require('../../drawable-xxhdpi/icon_tabbar_mine_selected.png')}
-
-                     />}
                      style={styles.iconStyle}/> }
+                    renderSelectedIcon = {()=> <Image source={{uri:'icon_tabbar_mine_selected'}} />}
                     selected = {this.state.selectionIndex == 2}
                     onPress={()=> this.setState({selectionIndex:2})}
+
                 >
                     {/*我*/}
                     <Mine/>
@@ -95,13 +104,12 @@ var Main = React.createClass({
 
                 <TabNavigator.Item
                     title = 'More'
-                    renderIcon={()=> <Image source={require('../../drawable-xxhdpi/icon_tabbar_misc.png')}
-                     renderSelectedIcon = {()=> <Image source={require('../../drawable-xxhdpi/icon_tabbar_misc_selected.png')}
-
-                     />}
-                     style={styles.iconStyle}/> }
+                    renderIcon={()=> <Image source={require('../../drawable-xxhdpi/icon_tabbar_misc.png')} style={styles.iconStyle}/> }
+                    renderSelectedIcon = {()=> <Image source={{uri:'icon_tabbar_mine_selected'}}
+                     style={styles.iconStyle} />}
                     selected = {this.state.selectionIndex == 3}
                     onPress={()=> this.setState({selectionIndex:3})}
+                    selectedTitleStyle={{color:'orange'}}
                 >
                     {/*更多*/}
                     <More/>

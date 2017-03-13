@@ -14,18 +14,20 @@ import {
 } from 'react-native';
 
 //  引入头部
-import HeaderScroll from './CSYHomeHeaderScroll';
+import HeaderScroll from './CSYHomeHeader/CSYHomeHeaderScroll';
+//  引入分类
+import  HomeClass from  './CSYClassItem/CSYHomeClassItem';
 
 var {width, height} = Dimensions.get('window');
 // 导入头部分类数据
-var HeaderJsonData =require('./header.json');
+var HeaderJsonData = require('./header.json');
 
 var Home = React.createClass({
 
     getDefaultProps(){
-        return(
+        return (
             {
-                listData:HeaderJsonData.data
+                listData: HeaderJsonData.data
             }
         )
     },
@@ -36,8 +38,10 @@ var Home = React.createClass({
                 {/*加载导航*/}
                 {this.initWitdhNav()}
                 <ScrollView>
-                {/*加载小分类*/}
-                {this.initWitdhClass()}
+                    {/*加载头部轮播小分类*/}
+                    {this.initWitdhScrollClass()}
+                    {/*加载定制的分类View*/}
+                    {this.initWithClassItem()}
                 </ScrollView>
             </View>
 
@@ -74,22 +78,28 @@ var Home = React.createClass({
             </View>
         )
     },
-    //  加载小分类
-    initWitdhClass (){
+    //  加载轮播小分类
+    initWitdhScrollClass (){
 
         return <HeaderScroll
-            listData={this.props.listData}
+            listData={this.props.listData.header}
+        />
+    },
+    //  加载定制的分类View
+    initWithClassItem () {
+
+        return <HomeClass
+            classData={this.props.listData.class}
         />
     }
 
 });
 
 
-
 const searchStyles = StyleSheet.create({
     searchViewStyle: {
         width: width,
-        height: Platform.OS == 'ios' ? 64:44,
+        height: Platform.OS == 'ios' ? 64 : 44,
         backgroundColor: '#fd5c06',
         flexDirection: 'row',
         alignItems: 'center'
