@@ -47,19 +47,16 @@ var Main = React.createClass({
                     onPress={()=>this.setState({selectionIndex:0})}
                     selectedTitleStyle={{color:'orange'}}
                 >
-                    <Home/>
-
-                     {/*<Navigator*/}
-                     {/*initialRoute={{name:'Home',component:Home}}//指定默认子组件页面*/}
-                     {/*configureScene={() =>{*/}
-                     {/*return Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft;//跳转动画*/}
-                     {/*}}*/}
-                     {/*renderScene={(rute,navigator) => {*/}
-                     {/**/}
-                     {/*let  Component = rute.component;*/}
-                     {/*return <Component {...rute.passProps} navigator={navigator}/>;*/}
-                     {/*}}/>*/}
-
+                    <Navigator
+                        initialRoute={{name:'Home',component:Home}}
+                        configureScene={()=>{
+                             return Navigator.SceneConfigs.PushFromRight;
+                        }}
+                        renderScene={(route,navigator)=>{
+                           let Component = route.component;
+                           return <Component {...route.passProps} navigator={navigator}/>;
+                        }}
+                    />
 
                 </TabNavigator.Item>
 
@@ -72,18 +69,14 @@ var Main = React.createClass({
                     selected = {this.state.selectionIndex == 1}
                     onPress={()=>this.setState({selectionIndex:1})}
                 >
-                    <Shoping/>
 
-                    {/*<Navigator*/}
-                    {/*initialRoute={{name:'Home',component:Home}}//指定默认子组件页面*/}
-                    {/*configureScene={() =>{*/}
-                    {/*return Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft;//跳转动画*/}
-                    {/*}}*/}
-                    {/*renderScene={(rute,navigator) => {*/}
-                    {/**/}
-                    {/*let  Component = rute.component;*/}
-                    {/*return <Component {...rute.passProps} navigator={navigator}/>;*/}
-                    {/*}}/>*/}
+                    <Navigator initialRoute={{name:'Shop',component:Shoping}} //要跳转的页面
+                               configureScene={()=> {
+                            return Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft }}//指定跳转动画
+                               renderScene={(rute,navigator) => {
+                                   let Component = route.component;
+                           return <Component {...route.passProps} navigator={navigator}/>;
+                        }}/>
 
 
                 </TabNavigator.Item>
@@ -93,7 +86,7 @@ var Main = React.createClass({
                     selectedTitleStyle={{color:'orange'}}
                     renderIcon={()=> <Image source={require('../../drawable-xxhdpi/icon_tabbar_mine.png')}
                      style={styles.iconStyle}/> }
-                    renderSelectedIcon = {()=> <Image source={{uri:'icon_tabbar_mine_selected'}} />}
+                    renderSelectedIcon = {()=> <Image source={{uri:'icon_tabbar_mine_selected'}} style={styles.iconStyle}/>}
                     selected = {this.state.selectionIndex == 2}
                     onPress={()=> this.setState({selectionIndex:2})}
 

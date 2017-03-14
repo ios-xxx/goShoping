@@ -10,13 +10,18 @@ import {
     Dimensions,
     TextInput,
     ScrollView,
-    Platform
+    Platform,
 } from 'react-native';
 
 //  引入头部
 import HeaderScroll from './CSYHomeHeader/CSYHomeHeaderScroll';
 //  引入分类
 import  HomeClass from  './CSYClassItem/CSYHomeClassItem';
+//  引入商城中心
+import  ShopCenter from './CSYHomeShopCenter/CSYHomeShopingCenter';
+//  引入商城详情页
+import  ShopDetail from './CSYHomeShopCenter/CSYHomeShopingDetail';
+
 
 var {width, height} = Dimensions.get('window');
 // 导入头部分类数据
@@ -28,13 +33,14 @@ var Home = React.createClass({
         return (
             {
                 listData: HeaderJsonData.data
+
             }
         )
     },
     render() {
         return (
 
-            <View style={{flex:1,backgroundColor:'#f0eef5'}}>
+            <View style={{backgroundColor:'#f0eef5'}}>
                 {/*加载导航*/}
                 {this.initWitdhNav()}
                 <ScrollView>
@@ -42,6 +48,18 @@ var Home = React.createClass({
                     {this.initWitdhScrollClass()}
                     {/*加载定制的分类View*/}
                     {this.initWithClassItem()}
+
+                    {/*加载商城中心*/}
+                    <ShopCenter
+                        shopData={this.props.listData.shop}
+                        propToValue={(title)=> {this.props.navigator.push({
+                    component: ShopDetail, // 要跳转的版块
+                    passProps:{'title':title}
+
+                    })}}
+
+                    />
+
                 </ScrollView>
             </View>
 

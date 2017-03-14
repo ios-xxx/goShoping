@@ -100,6 +100,37 @@
           "detail":"特惠不打烊"
         }
       ]
+    },
+    "shop":{
+        "navItem":{
+          "leftImg":"gwzx",
+          "leftTitle":"购物中心",
+          "rightTitle":"全部四家",
+          "detailUrl":"www.baidu.com"
+
+        },
+      "shop":[
+        {
+          "img":"kd",
+          "detail":"111家优惠",
+          "title":"凯德广场-云尚"
+        },
+        {
+          "img":"wd",
+          "detail":"32家优惠",
+          "title":"白云万达广场"
+        },
+        {
+          "img":"lyl",
+          "detail":"22家优惠",
+          "title":"来又来广场-云尚"
+        },
+        {
+          "img":"kd",
+          "detail":"22家优惠",
+          "title":"凯德广场-云尚"
+        }
+      ]
     }
 }
 }
