@@ -21,6 +21,8 @@ import  HomeClass from  './CSYClassItem/CSYHomeClassItem';
 import  ShopCenter from './CSYHomeShopCenter/CSYHomeShopingCenter';
 //  引入商城详情页
 import  ShopDetail from './CSYHomeShopCenter/CSYHomeShopingDetail';
+//  引入猜你喜欢
+import  GuessLike from './CSYHomeLike/CSYHomeLike';
 
 
 var {width, height} = Dimensions.get('window');
@@ -52,13 +54,14 @@ var Home = React.createClass({
                     {/*加载商城中心*/}
                     <ShopCenter
                         shopData={this.props.listData.shop}
-                        propToValue={(title)=> {this.props.navigator.push({
+                        propToValue={(valueArr)=> {this.props.navigator.push({
                     component: ShopDetail, // 要跳转的版块
-                    passProps:{'title':title}
-
+                    passProps:{'valueArr':valueArr}
                     })}}
-
                     />
+
+                    {/*加载猜你喜欢*/}
+                    <GuessLike />
 
                 </ScrollView>
             </View>

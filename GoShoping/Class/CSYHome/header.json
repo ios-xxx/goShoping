@@ -106,7 +106,7 @@
           "leftImg":"gwzx",
           "leftTitle":"购物中心",
           "rightTitle":"全部四家",
-          "detailUrl":"www.baidu.com"
+          "detailUrl":"imeituan://www.meituan.com/web/?url=http://i.meituan.com/shoppingmall/smDetail/4374715"
 
         },
       "shop":[
@@ -118,17 +118,20 @@
         {
           "img":"wd",
           "detail":"32家优惠",
-          "title":"白云万达广场"
+          "title":"白云万达广场",
+          "detailUrl":"imeituan://www.meituan.com/web/?url=http://i.meituan.com/shoppingmall/smDetail/50606658"
         },
         {
           "img":"lyl",
           "detail":"22家优惠",
-          "title":"来又来广场-云尚"
+          "title":"来又来广场-云尚",
+          "detailUrl":"imeituan://www.meituan.com/web/?url=http://i.meituan.com/shoppingmall/smDetail/75813274"
         },
         {
           "img":"kd",
           "detail":"22家优惠",
-          "title":"凯德广场-云尚"
+          "title":"凯德广场-云尚",
+          "detailUrl":"imeituan://www.meituan.com/web/?url=http://i.meituan.com/shoppingmall/smDetail/41692498"
         }
       ]
     }

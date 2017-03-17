@@ -57,9 +57,9 @@ class ShopCenter extends Component {
                 <TouchableOpacity key={i}>
                 <CustomImageView
                                  scrollDataItem={this.props.shopData.shop[i]}
-                                 propToValue = {(title) =>{
+                                 propToValue = {(valueArr) =>{
                                     if (this.props.propToValue == null) return;
-                                    this.props.propToValue(title)
+                                    this.props.propToValue(valueArr)
                                  }}
                 />
                 </TouchableOpacity>
@@ -83,7 +83,7 @@ class CustomImageView extends Component {
         return (
             <TouchableOpacity onPress={()=>{
                     if (this.props.propToValue == null) return;
-                    this.props.propToValue(this.props.scrollDataItem.title)
+                    this.props.propToValue([this.props.scrollDataItem.title,this.props.scrollDataItem.detailUrl])
                 }}>
                 <View style={customViewStyles.backgroundViewStyle}>
                     <Image source={{uri:this.props.scrollDataItem.img}} style={customViewStyles.ImageStyle}/>

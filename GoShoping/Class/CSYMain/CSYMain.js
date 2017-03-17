@@ -30,7 +30,7 @@ var Main = React.createClass({
 
     getInitialState(){
         return{
-            selectionIndex:2
+            selectionIndex:0
         }
     },
 
@@ -70,13 +70,7 @@ var Main = React.createClass({
                     onPress={()=>this.setState({selectionIndex:1})}
                 >
 
-                    <Navigator initialRoute={{name:'Shop',component:Shoping}} //要跳转的页面
-                               configureScene={()=> {
-                            return Navigator.SceneConfigs.HorizontalSwipeJumpFromLeft }}//指定跳转动画
-                               renderScene={(rute,navigator) => {
-                                   let Component = route.component;
-                           return <Component {...route.passProps} navigator={navigator}/>;
-                        }}/>
+                   <Shoping/>
 
 
                 </TabNavigator.Item>

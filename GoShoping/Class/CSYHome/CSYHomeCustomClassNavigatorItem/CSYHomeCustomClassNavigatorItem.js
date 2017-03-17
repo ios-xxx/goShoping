@@ -19,9 +19,7 @@ class NavigatorItem extends Component {
         var width = Dimensions.get('window').width;
         return (
             <View style={{height:44,backgroundColor:'white',flexDirection:'row',alignItems:'center',width:width}}>
-                {
-                    console.log('log='+this.props.leftImage)
-                }
+
                 <Image source={{uri:this.props.leftImage}} style={{marginLeft:8,width:30,height:30}}
                        resizeMode="stretch"/>
                 <Text style={{marginLeft:8,fontSize:15}}>{this.props.leftTitle}</Text>
